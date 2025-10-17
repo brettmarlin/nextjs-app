@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -24,6 +25,18 @@ export default function Home() {
         </ol>
 
         <div className="flex flex-col items-center gap-4 sm:flex-row">
+          <Link
+            className="bg-blue-600 text-white flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-blue-700 sm:h-12 sm:w-auto sm:px-5 sm:text-base"
+            href="/analytics"
+          >
+            📊 View LinkedIn Analytics
+          </Link>
+          <Link
+            className="bg-purple-600 text-white flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-purple-700 sm:h-12 sm:w-auto sm:px-5 sm:text-base"
+            href="/wireframe"
+          >
+            📱 View Wireframe App
+          </Link>
           <a
             className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
