@@ -13,55 +13,58 @@ export default function ProcessingPage() {
   };
 
   return (
-    <div className="w-full h-screen bg-gray-50 flex flex-col items-center justify-center p-4">
-      <div className="max-w-md w-full bg-white rounded-3xl shadow-2xl overflow-hidden" style={{ height: '740px' }}>
-        <div className="h-full flex flex-col items-center justify-center bg-gradient-to-b from-purple-50 to-blue-50 p-8">
-          <div className="text-center space-y-6">
+    <div className="flex h-screen w-full flex-col items-center justify-center bg-gray-50 p-4">
+      <div
+        className="w-full max-w-md overflow-hidden rounded-3xl bg-white shadow-2xl"
+        style={{ height: '740px' }}
+      >
+        <div className="flex h-full flex-col items-center justify-center bg-gradient-to-b from-purple-50 to-blue-50 p-8">
+          <div className="space-y-6 text-center">
             <div className="relative">
-              <div className="w-32 h-32 bg-purple-200 rounded-full absolute animate-ping opacity-20" />
-              <div className="w-32 h-32 bg-gradient-to-br from-purple-400 to-blue-400 rounded-full flex items-center justify-center relative">
-                <Sparkles size={48} className="text-white animate-pulse" />
+              <div className="absolute h-32 w-32 animate-ping rounded-full bg-purple-200 opacity-20" />
+              <div className="relative flex h-32 w-32 items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-blue-400">
+                <Sparkles size={48} className="animate-pulse text-white" />
               </div>
             </div>
-            
+
             <div className="space-y-3">
               <h2 className="text-2xl font-bold text-gray-900">Progress</h2>
-              <p className="text-gray-600 max-w-xs mx-auto">
+              <p className="mx-auto max-w-xs text-gray-600">
                 I've mapped your thought patterns and created personalized reframes just for you
               </p>
             </div>
-            
+
             <div className="w-full space-y-3 pt-4">
-              <div className="bg-white rounded-2xl p-4 flex items-center gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full" />
+              <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
+                <div className="h-2 w-2 rounded-full bg-green-500" />
                 <div className="text-sm text-gray-700">Understanding your context and goals</div>
               </div>
-              <div className="bg-white rounded-2xl p-4 flex items-center gap-3">
-                <div className="w-2 h-2 bg-green-500 rounded-full" />
+              <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
+                <div className="h-2 w-2 rounded-full bg-green-500" />
                 <div className="text-sm text-gray-700">Mapping your thought patterns - 87%</div>
               </div>
-              <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-4 flex items-center gap-3 relative overflow-hidden">
-                <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
-                <div className="text-sm text-gray-700 font-medium">Review Reframes - 3 New</div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full animate-shimmer"></div>
+              <div className="relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-purple-50 to-blue-50 p-4">
+                <div className="h-2 w-2 animate-pulse rounded-full bg-purple-400" />
+                <div className="text-sm font-medium text-gray-700">Review Reframes - 3 New</div>
+                <div className="animate-shimmer absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
               </div>
-              <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-2xl p-4 flex items-center gap-3 relative overflow-hidden">
-                <div className="w-2 h-2 bg-gray-300 rounded-full animate-pulse" />
+              <div className="relative flex items-center gap-3 overflow-hidden rounded-2xl bg-gradient-to-r from-gray-50 to-gray-100 p-4">
+                <div className="h-2 w-2 animate-pulse rounded-full bg-gray-300" />
                 <div className="text-sm text-gray-500">Creating your audio stories - 2 New</div>
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full animate-shimmer"></div>
+                <div className="animate-shimmer absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
               </div>
             </div>
-            
-            <button 
+
+            <button
               onClick={handleReview}
-              className="w-full bg-purple-600 text-white rounded-2xl py-4 font-medium text-lg hover:bg-purple-700 transition-colors mt-6"
+              className="mt-6 w-full rounded-2xl bg-purple-600 py-4 text-lg font-medium text-white transition-colors hover:bg-purple-700"
             >
               Review Reframes
             </button>
           </div>
         </div>
       </div>
-      
+
       <WireframeNavigation />
     </div>
   );

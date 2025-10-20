@@ -23,34 +23,28 @@ export default function AnalyticsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-8">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">
-            LinkedIn Feed Analytics
-          </h1>
+          <h1 className="text-3xl font-bold text-gray-900">LinkedIn Feed Analytics</h1>
           <p className="mt-2 text-gray-600">
             Track mentions of key terms in your LinkedIn feed over time
           </p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm p-6 mb-8">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">
-            Mention Trends
-          </h2>
-          <p className="text-gray-600 mb-6">
-            This chart shows the frequency of mentions for "orchestration agent" and "chat" 
-            in your LinkedIn feed over time. Use this data to understand trending topics 
-            and engagement patterns.
+        <div className="mb-8 rounded-lg bg-white p-6 shadow-sm">
+          <h2 className="mb-4 text-xl font-semibold text-gray-900">Mention Trends</h2>
+          <p className="mb-6 text-gray-600">
+            This chart shows the frequency of mentions for "orchestration agent" and "chat" in your
+            LinkedIn feed over time. Use this data to understand trending topics and engagement
+            patterns.
           </p>
-          
+
           <LinkedInMentionChart data={linkedInData} />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">
-              Key Insights
-            </h3>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="rounded-lg bg-white p-6 shadow-sm">
+            <h3 className="mb-3 text-lg font-semibold text-gray-900">Key Insights</h3>
             <ul className="space-y-2 text-gray-600">
               <li>• "Chat" mentions are consistently higher than "orchestration agent"</li>
               <li>• Both terms show upward trending patterns</li>
@@ -59,11 +53,9 @@ export default function AnalyticsPage() {
             </ul>
           </div>
 
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h3 className="text-lg font-semibold text-gray-900 mb-3">
-              Data Collection
-            </h3>
-            <p className="text-gray-600 mb-4">
+          <div className="rounded-lg bg-white p-6 shadow-sm">
+            <h3 className="mb-3 text-lg font-semibold text-gray-900">Data Collection</h3>
+            <p className="mb-4 text-gray-600">
               To get real data from your LinkedIn feed, you would need to:
             </p>
             <ul className="space-y-2 text-gray-600">

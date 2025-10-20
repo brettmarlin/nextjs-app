@@ -23,7 +23,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  TimeScale
+  TimeScale,
 );
 
 interface LinkedInMentionChartProps {
@@ -98,7 +98,7 @@ export default function LinkedInMentionChart({ data }: LinkedInMentionChartProps
         mode: 'index' as const,
         intersect: false,
         callbacks: {
-          title: function(context: any) {
+          title: function (context: any) {
             const date = new Date(context[0].label);
             return date.toLocaleDateString('en-US', {
               year: 'numeric',
@@ -106,7 +106,7 @@ export default function LinkedInMentionChart({ data }: LinkedInMentionChartProps
               day: 'numeric',
             });
           },
-          label: function(context: any) {
+          label: function (context: any) {
             return `${context.dataset.label}: ${context.parsed.y} mentions`;
           },
         },
@@ -146,7 +146,7 @@ export default function LinkedInMentionChart({ data }: LinkedInMentionChartProps
   };
 
   return (
-    <div className="w-full h-96 p-4 bg-white rounded-lg shadow-lg">
+    <div className="h-96 w-full rounded-lg bg-white p-4 shadow-lg">
       <Line data={chartConfig} options={options} />
     </div>
   );
