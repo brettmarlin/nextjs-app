@@ -37,6 +37,12 @@ export default function Home() {
           >
             📱 View Wireframe App
           </Link>
+          <Link
+            className="bg-green-600 text-white flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-green-700 sm:h-12 sm:w-auto sm:px-5 sm:text-base"
+            href="/progress"
+          >
+            📊 View Progress
+          </Link>
           <a
             className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
             href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
