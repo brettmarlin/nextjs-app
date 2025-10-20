@@ -117,7 +117,7 @@ const ProgressPage = () => {
 
             {/* Progress Areas */}
             <div className="space-y-4">
-              {progressAreas.map((area, index) => {
+              {progressAreas.map((area) => {
                 const IconComponent = area.icon;
                 return (
                   <div

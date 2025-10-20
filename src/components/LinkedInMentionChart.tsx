@@ -98,7 +98,7 @@ export default function LinkedInMentionChart({ data }: LinkedInMentionChartProps
         mode: 'index' as const,
         intersect: false,
         callbacks: {
-          title: function (context: any) {
+          title: function (context: ChartTooltipItem[]) {
             const date = new Date(context[0].label);
             return date.toLocaleDateString('en-US', {
               year: 'numeric',
@@ -106,7 +106,7 @@ export default function LinkedInMentionChart({ data }: LinkedInMentionChartProps
               day: 'numeric',
             });
           },
-          label: function (context: any) {
+          label: function (context: ChartTooltipItem) {
             return `${context.dataset.label}: ${context.parsed.y} mentions`;
           },
         },
